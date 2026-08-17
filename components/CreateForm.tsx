@@ -99,7 +99,7 @@ export function CreateForm() {
       <button
         type="submit"
         disabled={pending}
-        className="mt-8 w-full bg-ink py-3 font-mono text-xs tracking-[0.2em] text-[#f3ead8] uppercase hover:bg-wax disabled:opacity-60"
+        className="mt-8 w-full bg-mark py-3 font-mono text-xs tracking-[0.2em] text-on-mark uppercase hover:bg-wax hover:text-[#f3ead8] disabled:opacity-60"
       >
         {pending ? "Sealing…" : "Make the note"}
       </button>

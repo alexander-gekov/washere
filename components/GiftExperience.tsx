@@ -89,7 +89,7 @@ function CopyLink({ origin, slug }: { origin: string; slug: string }) {
 
   return (
     <div className="mt-8 flex flex-col gap-2 sm:flex-row">
-      <code className="flex-1 truncate border border-line bg-[#fffaf0] px-3 py-3 font-mono text-sm">
+      <code className="flex-1 truncate border border-line bg-scrap px-3 py-3 font-mono text-sm">
         {href}
       </code>
       <button

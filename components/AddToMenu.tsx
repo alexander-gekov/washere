@@ -30,7 +30,7 @@ export function AddToMenu({
       <button
         type="button"
         onClick={() => setOpen((value) => !value)}
-        className="inline-flex items-center gap-3 bg-ink px-5 py-3 font-mono text-xs tracking-[0.18em] text-[#f3ead8] uppercase"
+        className="inline-flex items-center gap-3 bg-mark px-5 py-3 font-mono text-xs tracking-[0.18em] text-on-mark uppercase"
       >
         Add to
         <span aria-hidden className="text-[0.7rem]">
@@ -38,7 +38,7 @@ export function AddToMenu({
         </span>
       </button>
       {open ? (
-        <ul className="absolute z-10 mt-2 min-w-full border border-ink bg-[#fffaf0] font-mono text-sm shadow-[4px_4px_0_#1a1410]">
+        <ul className="absolute z-10 mt-2 min-w-full border border-ink bg-scrap font-mono text-sm shadow-[4px_4px_0_var(--ink)]">
           <li>
             <a
               href={cursorRuleUrl(input)}

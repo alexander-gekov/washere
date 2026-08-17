@@ -24,7 +24,7 @@ export default function Home() {
             </p>
             <a
               href="#create"
-              className="mt-8 inline-block bg-ink px-5 py-3 font-mono text-xs tracking-[0.2em] text-[#f3ead8] uppercase hover:bg-wax"
+              className="mt-8 inline-block bg-mark px-5 py-3 font-mono text-xs tracking-[0.2em] text-on-mark uppercase hover:bg-wax hover:text-[#f3ead8]"
             >
               Write one
             </a>

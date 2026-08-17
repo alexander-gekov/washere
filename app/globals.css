@@ -1,21 +1,65 @@
 @import "tailwindcss";
 
 :root {
+  color-scheme: light;
   --paper: #f3ead8;
   --paper-deep: #e7d8bc;
+  --scrap: #f7f1e4;
+  --scrap-lift: #fff8ee;
+  --scrap-back: #efe3c8;
   --ink: #1a1410;
   --ink-soft: #5a4d42;
+  --mark: #1a1410;
+  --on-mark: #f3ead8;
   --wax: #8b2e2e;
   --wax-deep: #6a1f1f;
   --foil: #b8956a;
   --line: #d4c4a8;
+  --glow-a: #fff6e6;
+  --glow-b: #e8c9a4;
+  --envelope: #f6edda;
+  --envelope-deep: #e8d7b6;
+  --flap: #efe3c8;
+  --flap-deep: #ddc89a;
+  --letter: #fffaf0;
+  --envelope-line: #c9b48e;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    --paper: #16110e;
+    --paper-deep: #241c16;
+    --scrap: #2a221c;
+    --scrap-lift: #3a3028;
+    --scrap-back: #1c1612;
+    --ink: #f0e6d2;
+    --ink-soft: #c4b49a;
+    --mark: #f0e6d2;
+    --on-mark: #1a1410;
+    --wax: #c45a5a;
+    --wax-deep: #8b2e2e;
+    --foil: #d4b48a;
+    --line: #4a3d32;
+    --glow-a: #3a2418;
+    --glow-b: #2a1814;
+    --envelope: #2c241c;
+    --envelope-deep: #211a14;
+    --flap: #352c22;
+    --flap-deep: #241c16;
+    --letter: #3a3228;
+    --envelope-line: #5a4a3a;
+  }
 }
 
 @theme inline {
   --color-paper: var(--paper);
   --color-paper-deep: var(--paper-deep);
+  --color-scrap: var(--scrap);
   --color-ink: var(--ink);
   --color-ink-soft: var(--ink-soft);
+  --color-mark: var(--mark);
+  --color-on-mark: var(--on-mark);
   --color-wax: var(--wax);
   --color-wax-deep: var(--wax-deep);
   --color-foil: var(--foil);
@@ -34,8 +78,8 @@ body {
 body {
   font-family: var(--font-serif), "Times New Roman", serif;
   background-image:
-    radial-gradient(1200px 700px at 15% -10%, #fff6e6 0%, transparent 55%),
-    radial-gradient(900px 500px at 110% 10%, #e8c9a4 0%, transparent 50%),
+    radial-gradient(1200px 700px at 15% -10%, var(--glow-a) 0%, transparent 55%),
+    radial-gradient(900px 500px at 110% 10%, var(--glow-b) 0%, transparent 50%),
     url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.045'/%3E%3C/svg%3E");
 }
 
@@ -63,22 +107,22 @@ body {
 }
 
 .ide-scrap {
-  background: #f7f1e4;
+  background: var(--scrap);
   border: 1px solid var(--line);
   box-shadow:
-    0 1px 0 #fff8ee inset,
+    0 1px 0 var(--scrap-lift) inset,
     0 18px 40px -24px #1a141033;
 }
 
 .agent-win {
   position: relative;
-  background: #f7f1e4;
+  background: var(--scrap);
   border: 1px solid var(--line);
   padding: 1.25rem 1.35rem 1.5rem;
   transform: rotate(1.4deg);
   box-shadow:
-    0 1px 0 #fff8ee inset,
-    8px 18px 0 -8px #efe3c8,
+    0 1px 0 var(--scrap-lift) inset,
+    8px 18px 0 -8px var(--scrap-back),
     0 28px 50px -28px #1a141044;
 }
 
@@ -88,8 +132,7 @@ body {
   right: -1.35rem;
   width: 5.6rem;
   height: 5.6rem;
-  object-fit: cover;
-  border-radius: 50%;
+  object-fit: contain;
   transform: rotate(14deg);
   mix-blend-mode: multiply;
   pointer-events: none;
@@ -122,6 +165,13 @@ body {
   }
 }
 
+@media (prefers-color-scheme: dark) {
+  .agent-win-seal {
+    mix-blend-mode: normal;
+    filter: drop-shadow(0 8px 12px #00000066);
+  }
+}
+
 .envelope {
   width: min(22rem, 88vw);
   aspect-ratio: 1.5 / 1;
@@ -132,8 +182,8 @@ body {
 .envelope-body {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, #f6edda 0%, #e8d7b6 100%);
-  border: 1px solid #c9b48e;
+  background: linear-gradient(180deg, var(--envelope) 0%, var(--envelope-deep) 100%);
+  border: 1px solid var(--envelope-line);
   box-shadow: 0 22px 50px -28px #1a141066;
 }
 
@@ -144,9 +194,9 @@ body {
   top: 0;
   height: 58%;
   transform-origin: top center;
-  background: linear-gradient(180deg, #efe3c8 0%, #ddc89a 100%);
+  background: linear-gradient(180deg, var(--flap) 0%, var(--flap-deep) 100%);
   clip-path: polygon(0 0, 100% 0, 50% 100%);
-  border-bottom: 1px solid #c9b48e;
+  border-bottom: 1px solid var(--envelope-line);
   z-index: 3;
   transition: transform 900ms cubic-bezier(0.22, 1, 0.36, 1);
 }
@@ -161,8 +211,8 @@ body {
   right: 8%;
   top: 18%;
   height: 70%;
-  background: #fffaf0;
-  border: 1px solid #d8c7a6;
+  background: var(--letter);
+  border: 1px solid var(--envelope-line);
   z-index: 2;
   transform: translateY(18%);
   transition: transform 900ms 180ms cubic-bezier(0.22, 1, 0.36, 1);
