@@ -37,7 +37,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
             </span>
           </Link>
           <a
-            href="https://github.com/alexandergekov/washere"
+            href="https://github.com/alexander-gekov/washere"
             className="font-mono text-xs tracking-wide underline decoration-line underline-offset-4 hover:text-wax"
           >
             Source

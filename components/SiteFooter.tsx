@@ -5,9 +5,9 @@ export function SiteFooter() {
         <p>Open source. Snapshot at install. Never phones home.</p>
         <a
           className="font-mono text-xs tracking-wide underline decoration-foil underline-offset-4 hover:text-ink"
-          href="https://github.com/alexandergekov/washere"
+          href="https://github.com/alexander-gekov/washere"
         >
-          github.com/alexandergekov/washere
+          github.com/alexander-gekov/washere
         </a>
       </div>
     </footer>
