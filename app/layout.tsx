@@ -36,12 +36,20 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
               washere
             </span>
           </Link>
-          <a
-            href="https://github.com/alexander-gekov/washere"
-            className="font-mono text-xs tracking-wide underline decoration-line underline-offset-4 hover:text-wax"
-          >
-            Source
-          </a>
+          <nav className="flex items-center gap-5">
+            <Link
+              href="/#create"
+              className="font-mono text-xs tracking-wide underline decoration-line underline-offset-4 hover:text-wax"
+            >
+              Write one
+            </Link>
+            <a
+              href="https://github.com/alexander-gekov/washere"
+              className="font-mono text-xs tracking-wide underline decoration-line underline-offset-4 hover:text-wax"
+            >
+              Source
+            </a>
+          </nav>
         </header>
         {children}
       </body>

@@ -1,3 +1,4 @@
+import { AgentWin } from "@/components/AgentWin";
 import { CreateForm } from "@/components/CreateForm";
 import { ExampleNotes } from "@/components/ExampleNotes";
 import { SiteFooter } from "@/components/SiteFooter";
@@ -6,23 +7,29 @@ export default function Home() {
   return (
     <>
       <main>
-        <section className="mx-auto w-full max-w-5xl px-6 pt-20 sm:pt-28">
-          <p className="font-mono text-xs tracking-[0.22em] text-wax uppercase">
-            A skill for his agent
-          </p>
-          <h1 className="mt-5 max-w-3xl font-serif text-5xl leading-[1.05] italic sm:text-7xl">
-            Leave a note in his coding agent.
-          </h1>
-          <p className="mt-6 max-w-xl text-xl leading-relaxed text-ink-soft">
-            After he ships something — tests pass, a bug dies — it may leave a
-            stamp. Your name. One line. Then it gets out of the way.
-          </p>
-          <a
-            href="#create"
-            className="mt-8 inline-block bg-ink px-5 py-3 font-mono text-xs tracking-[0.2em] text-[#f3ead8] uppercase"
-          >
-            Write one
-          </a>
+        <section className="mx-auto grid w-full max-w-5xl items-end gap-14 px-6 pt-16 sm:pt-24 lg:grid-cols-[1.15fr_0.85fr] lg:gap-16">
+          <div>
+            <p className="font-mono text-xs tracking-[0.22em] text-wax uppercase">
+              A skill for his agent
+            </p>
+            <h1 className="mt-5 max-w-3xl font-serif text-5xl leading-[1.05] italic sm:text-7xl">
+              Leave a note in his coding agent.
+            </h1>
+            <p className="mt-6 max-w-xl text-xl leading-relaxed text-ink-soft">
+              After he ships something — tests pass, a bug dies — it may leave a
+              stamp. Your name. One line. Then it gets out of the way.
+            </p>
+            <p className="mt-4 font-mono text-[0.7rem] tracking-[0.16em] text-foil uppercase">
+              Cursor · Claude Code · Codex
+            </p>
+            <a
+              href="#create"
+              className="mt-8 inline-block bg-ink px-5 py-3 font-mono text-xs tracking-[0.2em] text-[#f3ead8] uppercase hover:bg-wax"
+            >
+              Write one
+            </a>
+          </div>
+          <AgentWin />
         </section>
 
         <ExampleNotes />
@@ -31,7 +38,7 @@ export default function Home() {
           <p className="font-mono text-xs tracking-[0.2em] text-wax uppercase">
             How it works
           </p>
-          <ol className="mt-8 grid gap-6 md:grid-cols-3">
+          <ol className="mt-8 grid gap-8 md:grid-cols-3 md:gap-6">
             {[
               {
                 n: "01",
@@ -49,7 +56,7 @@ export default function Home() {
                 d: "About one in three finished tasks. Once per chat. Never mid-debug.",
               },
             ].map((step) => (
-              <li key={step.n}>
+              <li key={step.n} className="border-t border-line pt-4">
                 <p className="font-mono text-xs text-foil">{step.n}</p>
                 <h3 className="mt-2 font-serif text-2xl italic">{step.t}</h3>
                 <p className="mt-2 text-ink-soft">{step.d}</p>

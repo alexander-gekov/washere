@@ -12,8 +12,9 @@ export function ExampleNotes() {
       <div className="mt-10 grid gap-5 md:grid-cols-3">
         {HOMEPAGE_EXAMPLES.map((example) => (
           <figure key={example.tone} className="ide-scrap p-5">
-            <figcaption className="font-mono text-[0.7rem] tracking-[0.18em] text-ink-soft uppercase">
-              {example.label}
+            <figcaption className="flex items-center justify-between gap-3 font-mono text-[0.65rem] tracking-[0.16em] text-ink-soft uppercase">
+              <span>{example.label}</span>
+              <span className="text-foil">{example.win}</span>
             </figcaption>
             <pre className="mt-4 font-serif text-lg leading-relaxed whitespace-pre-wrap">
               {example.note}

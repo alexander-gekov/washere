@@ -70,6 +70,58 @@ body {
     0 18px 40px -24px #1a141033;
 }
 
+.agent-win {
+  position: relative;
+  background: #f7f1e4;
+  border: 1px solid var(--line);
+  padding: 1.25rem 1.35rem 1.5rem;
+  transform: rotate(1.4deg);
+  box-shadow:
+    0 1px 0 #fff8ee inset,
+    8px 18px 0 -8px #efe3c8,
+    0 28px 50px -28px #1a141044;
+}
+
+.agent-win-seal {
+  position: absolute;
+  top: -1.55rem;
+  right: -1.35rem;
+  width: 5.6rem;
+  height: 5.6rem;
+  object-fit: cover;
+  border-radius: 50%;
+  transform: rotate(14deg);
+  mix-blend-mode: multiply;
+  pointer-events: none;
+}
+
+.agent-win-note {
+  border-top: 1px dashed var(--line);
+  padding-top: 1.25rem;
+  animation: land 900ms 650ms both;
+}
+
+.agent-win-stamp {
+  transform: rotate(-8deg);
+}
+
+@keyframes land {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .agent-win-note {
+    animation: none;
+  }
+}
+
 .envelope {
   width: min(22rem, 88vw);
   aspect-ratio: 1.5 / 1;
