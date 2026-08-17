@@ -3,12 +3,9 @@ import { fetchQuery } from "convex/nextjs";
 import { api } from "@/convex/_generated/api";
 import { GiftExperience } from "@/components/GiftExperience";
 import { SiteFooter } from "@/components/SiteFooter";
+import { siteOrigin } from "@/lib/origin";
 
 export const dynamic = "force-dynamic";
-
-function siteOrigin(): string {
-  return process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
-}
 
 export default async function GiftPage({
   params,
