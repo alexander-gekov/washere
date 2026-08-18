@@ -68,7 +68,7 @@ export function AddToMenu({
       {copied ? (
         <p className="mt-3 font-mono text-xs text-ink-soft">
           Command copied for {copied === "claude" ? "Claude Code" : "Codex"}.
-          Paste it in a terminal on his machine.
+          Paste it in a terminal on their machine.
         </p>
       ) : null}
     </div>

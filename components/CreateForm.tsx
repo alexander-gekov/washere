@@ -85,7 +85,7 @@ export function CreateForm() {
           name="joke"
           maxLength={280}
           rows={3}
-          placeholder="the rooftop ramen, or how he always forgets to eat"
+          placeholder="the rooftop ramen, or how they always forget to eat"
           className="mt-2 w-full resize-none border border-line bg-transparent p-3 font-serif text-lg outline-none placeholder:text-line focus:border-wax"
         />
       </label>

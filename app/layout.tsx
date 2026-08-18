@@ -17,9 +17,9 @@ const ibmPlexMono = IBM_Plex_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "washere — a note in his coding agent",
+  title: "washere — a note in their coding agent",
   description:
-    "Leave a surprise note in Cursor, Claude Code, or Codex. After he finishes something, it may say you were here.",
+    "Leave a surprise note in Cursor, Claude Code, or Codex. After they finish something, it may say you were here.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

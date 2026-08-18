@@ -2,7 +2,7 @@
 
 A small agent skill that leaves a note after a win.
 
-Someone who loves a developer fills in a name, a tone, and maybe a joke. He gets a short link, installs it into Cursor, Claude Code, or Codex, and once in a while — after tests pass, after a bug dies — the agent adds:
+Someone who cares about a developer fills in a name, a tone, and maybe a joke. They get a short link, install it into Cursor, Claude Code, or Codex, and once in a while — after tests pass, after a bug dies — the agent adds:
 
 ```
 Maya was here.
