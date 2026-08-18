@@ -31,7 +31,8 @@ export function GiftExperience({
           A note from {input.name}.
         </h1>
         <p className="mt-4 text-lg text-ink-soft">
-          Send him the link, or install it on his machine while he is away.
+          Send them the link, or install it on their machine while they are
+          away.
         </p>
         <CopyLink origin={origin} slug={slug} />
         <div className="mt-6">
@@ -46,7 +47,7 @@ export function GiftExperience({
           </pre>
         </figure>
         <p className="mt-6 text-sm text-ink-soft">
-          This is a snapshot. A new joke later means a new link, or he clicks
+          This is a snapshot. A new joke later means a new link, or they click
           Add to again.
         </p>
         <FileToggle

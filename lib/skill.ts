@@ -1,7 +1,7 @@
 import type { LinkInput, Tone } from "./types";
 
 const TONE_HINT: Record<Tone, string> = {
-  warm: "Warm, sincere, a little soft. No jokes at his expense.",
+  warm: "Warm, sincere, a little soft. No jokes at their expense.",
   teasing: "Light teasing, fond, never mean. One raised eyebrow, then kindness.",
   short: "Almost nothing. One short line after the stamp. No paragraph.",
 };
